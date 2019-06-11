@@ -15,4 +15,8 @@ class ProcessFile
         puts csv
     end
 
+    def loadCSV(file)
+        CSV.read(file)
+    end
+
 end
