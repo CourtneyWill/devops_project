@@ -8,11 +8,11 @@ class ProcessFile
     end
 
     def toCSV(response)
-        CSV.open("files/file.csv", 'w') do |csv|
-            JSON.parse(response).each do |row| #open json to parse
-                csv << row.values #write value to file
-              end
+        data = JSON.parse(response)
+        csv = CSV.generate do |c|
+            c << data
         end
+        puts csv
     end
 
 end
