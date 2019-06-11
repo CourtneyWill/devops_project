@@ -9,5 +9,5 @@ Getting Start (OS X)
 
  - Run application
  
-    - from the root of the application type ruby init
+    - from the root of the application type "ruby init"
     - follow the onscreen promtps
