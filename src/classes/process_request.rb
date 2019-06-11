@@ -9,4 +9,12 @@ class ProcessRequest
        ProcessFile.processResponse(response)
     end
 
+    def self.getAreatList(lat, lng)
+        uri = URI(BASE_URL+'requests.json')
+        params = {:lat => lat, :long => lng}
+        uri.query = URI.encode_www_form(params)
+        response = Net::HTTP.get_response(uri)
+        ProcessFile.processResponse(response)
+     end
+
 end
